@@ -1,1 +1,14 @@
 <h1>ADOPTIONS</h1>
+
+<table>
+  <tr>
+    <th>Owner</th>
+    <th>Pet</th>
+  </tr>
+  <%for adoption in @adoptions%>
+  <tr>
+    <td><%=adoption.owner.name()%></td>
+    <td><%=adoption.pet.name%></td>
+  </tr>
+  <%end%>
+</table>

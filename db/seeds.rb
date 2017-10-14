@@ -27,6 +27,15 @@ pet2 = Pet.new({
   })
 pet2.save()
 
+pet3 = Pet.new({
+  "name" => "Benji",
+  "type" => "Cat",
+  "breed" => "British Shorthair",
+  "status" => "Adopted",
+  "admission_date" => "2017-07-30"
+  })
+pet3.save()
+
 # owners
 owner1 = Owner.new({
   "name" => "Gary Smith"
@@ -40,7 +49,7 @@ owner2.save()
 
 # adoptions
 adoption1 = Adoption.new({
-  "pet_id" => pet1.id(),
+  "pet_id" => pet3.id(),
   "owner_id" => owner1.id()
   })
 adoption1.save()

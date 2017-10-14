@@ -1,5 +1,7 @@
 <h1>PETS</h1>
 
+<a href="#">Add New Pet</a>
+
 <table>
   <tr>
     <th>Name</th>
@@ -9,12 +11,18 @@
     <th>Status</th>
   </tr>
   <%for pet in @pets%>
-  <tr>
-    <td><%=pet.name%></td>
-    <td><%=pet.type%></td>
-    <td><%=pet.breed%></td>
-    <td><%=pet.admission_date%></td>
-    <td><%=pet.status%></td>
-  </tr>
+    <%unless pet.status == "Adopted"%>
+    <tr>
+      <td><%=pet.name%></td>
+      <td><%=pet.type%></td>
+      <td><%=pet.breed%></td>
+      <td><%=pet.admission_date%></td>
+      <td><%=pet.status%></td>
+      <div>
+        <td><a href="#">Edit</a></td>
+        <td><a href="#">Delete</a></td>
+      </div>
+    </tr>
+    <%end%>
   <%end%>
 </table>

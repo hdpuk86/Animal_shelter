@@ -1,1 +1,12 @@
 <h1>OWNERS</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for owner in @owners %>
+  <tr>
+    <td><%=owner.name%></td>
+  </tr>
+  <% end %>
+</table>
