@@ -1,8 +1,6 @@
-<h1>PETS</h1>
-
+<nav class="nav--second"><h1>PETS</h1>
 <a href="pets/new">Add New Pet</a>
-<hr/>
-  <p></p>
+</nav>
 <table>
   <tr>
     <th>Name</th>
@@ -19,10 +17,9 @@
       <td><%=pet.breed%></td>
       <td><%=pet.admission_date%></td>
       <td><%=pet.status%></td>
-      <div>
-        <td><a href="#">Edit</a></td>
-        <td><a href="#">Delete</a></td>
-      </div>
+      <td><a href="/pets/<%=pet.id%>">Show Details</a></td>
+        <!-- <td><a href="#">Edit</a></td>
+        <td><a href="#">Delete</a></td> -->
     </tr>
     <%end%>
   <%end%>

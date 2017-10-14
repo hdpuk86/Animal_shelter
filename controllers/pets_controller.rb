@@ -17,3 +17,8 @@ post '/pets' do
   pet.save()
   redirect to('/pets')
 end
+
+get '/pets/:id' do
+  @pet = Pet.find(params['id'])
+  erb(:"pets/show")
+end

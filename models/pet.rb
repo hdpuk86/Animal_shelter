@@ -56,6 +56,13 @@ class Pet
     return Pet.new(result)
   end
 
+  def owner()
+    sql = "SELECT owners.name FROM owners
+         INNER JOIN adoptions
+         ON adoptions.owner_id = owners.id
+         WHERE pet_id = $1;"
+  end
+
 end
 
 # strftime - admission_date.strftime("%d/%m/%Y")
