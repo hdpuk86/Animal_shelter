@@ -7,3 +7,7 @@ get '/adoptions' do
   @adoptions = Adoption.all()
   erb(:"adoptions/index")
 end
+
+get '/adoptions/new' do
+  erb(:"adoptions/new")
+end
