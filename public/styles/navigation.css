@@ -1,3 +1,14 @@
 nav {
   border-bottom: 4px solid gold;
 }
+
+.navButton {
+  background-color: white;
+  border: hidden;
+}
+
+.navButton:hover {
+  border-left: 2px solid gold;
+  border-right: 2px solid gold;
+
+}
