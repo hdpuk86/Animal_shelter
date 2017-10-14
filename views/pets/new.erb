@@ -1,0 +1,36 @@
+<h1>New Pet</h1>
+
+<form action="/pets" method="post">
+  <div>
+    <label for="Name">Name</label>
+    <input type="text" name="name"/>
+  </div>
+  <div>
+    <label for="Type">Type</label>
+    <select name="type">
+      <option value="Dog">Dog</option>
+      <option value="Cat">Cat</option>
+    </select>
+  </div>
+  <div>
+    <label for="Breed">Breed</label>
+    <input type="text" name="breed"/>
+  </div>
+  <div>
+    <label for="admissionDate">Admission Date</label>
+    <input type="date" name="admission_date"/>
+  </div>
+  <div>
+    <label for="Status">Status</label>
+    <select name="status">
+      <option value="Recovering">In Hospital</option>
+      <option value="In Training">In Training</option>
+      <option value="Ready to Adopt">Ready to Adopt</option>
+      <option value="Adopted">Adopted</option>
+    </select>
+  </div>
+  <div>
+    <input type="submit" value="Enter">
+  </div>
+
+</form>

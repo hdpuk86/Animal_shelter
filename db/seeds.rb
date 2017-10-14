@@ -13,7 +13,7 @@ pet1 = Pet.new({
   "name" => "Rex",
   "type" => "Dog",
   "breed" => "Husky",
-  "status" => "Ready",
+  "status" => "Ready to Adopt",
   "admission_date" => "2017-09-03"
   })
 pet1.save()
@@ -22,7 +22,7 @@ pet2 = Pet.new({
   "name" => "Willow",
   "type" => "Cat",
   "breed" => "Tabby",
-  "status" => "Not",
+  "status" => "In Training",
   "admission_date" => "2017-09-27"
   })
 pet2.save()
