@@ -49,6 +49,17 @@ class Owner
     return results.map {|owner| Owner.new(owner)}
   end
 
-
+  def adopt(pet)
+    #if pet status is ready
+    if pet.status == "Ready"
+      #change pet status to "Adopted"
+      pet.status = "Adopted"
+      pet.update()
+      #insert new adoption into adoptions table in the database
+      sql = "INSERT INTO adoptions (pet_id, owner_id) VALUES ($1, $2);"
+      values = [pet.id, @id]
+      Sql_runner.run(sql, "add_adoption", values)
+    end
+  end
 
 end
