@@ -29,6 +29,33 @@ class Pet
     Sql_runner.run(sql, "delete_all_pets", values)
   end
 
+  def delete()
+    sql = "DELETE FROM pets WHERE id = $1;"
+    values = [@id]
+    Sql_runner.run(sql, "delete_a_pet", values)
+  end
+
+  def update()
+    sql = "UPDATE pets SET (name, type, breed, status, admission_date)
+    =($1, $2, $3, $4, $5) WHERE id = $6;"
+    values = [@name, @type, @breed, @status, @admission_date, @id]
+    Sql_runner.run(sql, "update_pet", values)
+  end
+
+  def self.all()
+    sql = "SELECT * FROM pets;"
+    values = []
+    results = Sql_runner.run(sql, "show_all_pets", values)
+    return results.map {|pet| Pet.new(pet)}
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM pets WHERE id = $1;"
+    values = [id]
+    result = Sql_runner.run(sql, "find_pet", values).first()
+    return Pet.new(result)
+  end
+
 end
 
 # strftime - admission_date.strftime("%d/%m/%Y")

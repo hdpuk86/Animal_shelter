@@ -38,13 +38,12 @@ owner1.save()
     })
 owner2.save()
 
-
-
 # adoptions
 adoption1 = Adoption.new({
   "pet_id" => pet1.id(),
   "owner_id" => owner1.id()
   })
+adoption1.save()
 
 binding.pry
 nil
