@@ -8,6 +8,8 @@ nav a, a:visited {
 }
 
 .nav--second {
+  display: flex;
+  justify-content: start;
   border-top: hidden;
   border-bottom: 4px solid #F4F1BB;
 }

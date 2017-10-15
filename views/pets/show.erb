@@ -1,9 +1,9 @@
 <nav class="nav--second">
-  <h1><%=@pet.name()%></h1>
   <button class="button button--second"><a href="/pets/<%=@pet.id%>/edit">Edit <%=@pet.name%></a></button>
   <button class="button button--second"><a href="#">Delete <%=@pet.name%></a></button>
 </nav>
 
+<h1><%=@pet.name()%></h1>
 <article>
   <p><%=@pet.name()%> is a <%=@pet.breed()%></p>
   <p>Admission Date: <%=@pet.admission_date%></p>

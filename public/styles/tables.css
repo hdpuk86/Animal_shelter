@@ -2,11 +2,11 @@ table {
   margin: auto;
   border-collapse: collapse;
   text-align: center;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 th, td {
 width: 15%;
-font-family: verdana;
 font-size: 20px;
 }
 
