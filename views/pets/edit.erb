@@ -1,1 +1,37 @@
 <h1>Edit <%=@pet.name()%>'s details</h1>
+<%if @pet.status == "Adopted"%>
+<p><%=@pet.name%> was already adopted and can't be edited</p>
+<%else%>
+<form action="/pets/<%=@pet.id()%>" method="post">
+<div>
+  <label for="Name">Name</label>
+  <input type="text" name="name" value="<%=@pet.name()%>"/>
+</div>
+<div>
+  <label for="Type">Type</label>
+  <select name="type">
+    <option value="Dog">Dog</option>
+    <option value="Cat">Cat</option>
+  </select>
+</div>
+<div>
+  <label for="Breed">Breed</label>
+  <input type="text" name="breed" value="<%=@pet.breed()%>"/>
+</div>
+<div>
+  <label for="admissionDate">Admission Date</label>
+  <input type="date" name="admission_date" value="<%=@pet.admission_date()%>"/>
+</div>
+<div>
+  <label for="Status">Status</label>
+  <select name="status">
+    <option value="Recovering">In Hospital</option>
+    <option value="In Training">In Training</option>
+    <option value="Ready to Adopt">Ready to Adopt</option>
+  </select>
+</div>
+<div>
+  <input type="submit" name="Enter"/>
+</div>
+</form>
+<%end%>
