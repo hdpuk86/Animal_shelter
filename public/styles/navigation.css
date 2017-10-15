@@ -1,14 +1,26 @@
 nav {
   border-bottom: 4px solid gold;
+  display: flex;
+  justify-content: flex-start;
 }
 
-.navButton {
+nav a {
+  text-decoration: none;
+}
+
+.ul--nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  list-style-type: none;
+}
+
+.button {
   background-color: white;
   border: hidden;
 }
 
-.navButton:hover {
+.button:hover {
   border-left: 2px solid gold;
   border-right: 2px solid gold;
-
 }
