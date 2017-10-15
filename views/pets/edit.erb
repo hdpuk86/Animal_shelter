@@ -7,6 +7,7 @@
 <%if @pet.status == "Adopted"%>
 <p><%=@pet.name%> was already adopted and can't be edited</p>
 <%else%>
+<div class="form">
 <form action="/pets/<%=@pet.id()%>" method="post">
 <div>
   <label for="Name">Name</label>
@@ -39,4 +40,5 @@
   <input type="submit" name="Enter"/>
 </div>
 </form>
+</div>
 <%end%>
