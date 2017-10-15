@@ -1,0 +1,30 @@
+table {
+  margin: auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th, td {
+width: 15%;
+font-family: verdana;
+font-size: 20px;
+}
+
+th {
+  background-color: #5d576b;
+  color: #E6EbE0;
+  height: 50px;
+}
+
+.bodyRows {
+  background-color: #9BC1BC;
+  height: 200px;
+}
+
+ tr:nth-child(2n-1) {
+  background-color: #E6EBE0;
+}
+
+.table {
+  margin-top: 100px;
+}

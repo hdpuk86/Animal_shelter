@@ -2,6 +2,7 @@
   <h1>ADOPTIONS</h1>
 </nav>
 
+<div class="table">
 <table>
   <tr>
     <th>Owner</th>
@@ -9,10 +10,11 @@
     <th>Type</th>
   </tr>
   <%for adoption in @adoptions%>
-  <tr>
+  <tr class="bodyRows">
     <td><%=adoption.owner.name()%></td>
     <td><%=adoption.pet.name%></td>
     <td><%=adoption.pet.type%></td>
   </tr>
   <%end%>
 </table>
+</div>

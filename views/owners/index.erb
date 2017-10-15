@@ -2,13 +2,15 @@
   <h1>OWNERS</h1>
 </nav>
 
+<div class="table">
 <table>
   <tr>
     <th>Name</th>
   </tr>
   <% for owner in @owners %>
-  <tr>
+  <tr class="bodyRows">
     <td><%=owner.name%></td>
   </tr>
   <% end %>
 </table>
+</div>

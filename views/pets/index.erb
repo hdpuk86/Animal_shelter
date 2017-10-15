@@ -1,24 +1,27 @@
 <nav class="nav--second">
-<h1>PETS</h1>
-<button class="button button--second"><a href="pets/new">Add New Pet</a></button>
+  <h1>PETS</h1>
+  <button class="button button--second"><a href="pets/new">Add New Pet</a></button>
 </nav>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Type</th>
-    <th>Breed</th>
-    <th>Admission Date</th>
-    <th>Status</th>
-  </tr>
-  <%@pets = @pets.sort_by {|pet| pet.admission_date()}%>
-  <%for pet in @pets%>
-    <tr>
-      <td><%=pet.name%></td>
-      <td><%=pet.type%></td>
-      <td><%=pet.breed%></td>
-      <td><%=pet.admission_date%></td>
-      <td><%=pet.status%></td>
-      <td><a href="/pets/<%=pet.id%>">Show Details</a></td>
-    </tr>
-  <%end%>
-</table>
+<div class="table">
+  <table>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Breed</th>
+        <th>Admission Date</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    <%@pets = @pets.sort_by {|pet| pet.admission_date()}%>
+    <%for pet in @pets%>
+      <tr class="bodyRows">
+        <td><%=pet.name%></td>
+        <td><%=pet.type%></td>
+        <td><%=pet.breed%></td>
+        <td><%=pet.admission_date%></td>
+        <td><%=pet.status%></td>
+        <td><a href="/pets/<%=pet.id%>">Show Details</a></td>
+      </tr>
+      <%end%>
+  </table>
+</div>
