@@ -4,8 +4,9 @@ nav {
   justify-content: flex-start;
 }
 
-nav a {
+nav a, a:visited {
   text-decoration: none;
+  color: #003399;
 }
 
 .ul--nav {
@@ -17,10 +18,16 @@ nav a {
 
 .button {
   background-color: white;
+  font-size: 33px;
   border: hidden;
+  color: black;
 }
 
 .button:hover {
   border-left: 2px solid gold;
   border-right: 2px solid gold;
+}
+
+.button--second {
+  font-size: 15px;
 }
