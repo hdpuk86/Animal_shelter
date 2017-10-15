@@ -1,31 +1,36 @@
 nav {
-  border-bottom: 4px solid gold;
-  display: flex;
-  justify-content: flex-start;
+  border-top: 4px solid #F4F1BB;
 }
 
 nav a, a:visited {
   text-decoration: none;
-  color: #003399;
+  color: #ED6A5A;
+}
+
+.nav--main {
+  /*height: 300px;*/
+  /*background: url('/images/pet_banner.jpg');
+  background-position: center;
+  background-repeat: no-repeat;*/
 }
 
 .ul--nav {
   display: flex;
-  justify-content: space-around;
-  align-items: baseline;
+  justify-content: center;
   list-style-type: none;
 }
 
 .button {
-  background-color: white;
+  background-color: transparent;
   font-size: 33px;
   border: hidden;
   color: black;
+  padding: 0px 20px 0px 20px;
 }
 
 .button:hover {
-  border-left: 2px solid gold;
-  border-right: 2px solid gold;
+  border-left: 2px solid #F4F1BB;
+  border-right: 2px solid #F4F1BB;
 }
 
 .button--second {

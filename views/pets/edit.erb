@@ -1,4 +1,7 @@
-<h1>Edit <%=@pet.name()%>'s details</h1>
+<nav class="nav--second">
+  <h1>Edit <%=@pet.name()%>'s details</h1>
+</nav>
+
 <%if @pet.status == "Adopted"%>
 <p><%=@pet.name%> was already adopted and can't be edited</p>
 <%else%>
