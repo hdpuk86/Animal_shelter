@@ -4,11 +4,13 @@
   <tr>
     <th>Owner</th>
     <th>Pet</th>
+    <th>Type</th>
   </tr>
   <%for adoption in @adoptions%>
   <tr>
     <td><%=adoption.owner.name()%></td>
     <td><%=adoption.pet.name%></td>
+    <td><%=adoption.pet.type%></td>
   </tr>
   <%end%>
 </table>

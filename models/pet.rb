@@ -57,10 +57,13 @@ class Pet
   end
 
   def owner()
-    sql = "SELECT owners.name FROM owners
+    sql = "SELECT owners.* FROM owners
          INNER JOIN adoptions
          ON adoptions.owner_id = owners.id
          WHERE pet_id = $1;"
+    values = [@id]
+    result = Sql_runner.run(sql,"find_owner", values).first()
+    return Owner.new(result).name()
   end
 
 end

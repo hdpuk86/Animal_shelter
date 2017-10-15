@@ -10,7 +10,6 @@
     <th>Status</th>
   </tr>
   <%for pet in @pets%>
-    <%unless pet.status == "Adopted"%>
     <tr>
       <td><%=pet.name%></td>
       <td><%=pet.type%></td>
@@ -19,6 +18,5 @@
       <td><%=pet.status%></td>
       <td><a href="/pets/<%=pet.id%>">Show Details</a></td>
     </tr>
-    <%end%>
   <%end%>
 </table>

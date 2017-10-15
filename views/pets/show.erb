@@ -8,10 +8,8 @@
   <p><%=@pet.name()%> is a <%=@pet.breed()%></p>
   <p>Admission Date: <%=@pet.admission_date%></p>
   <%if @pet.status == "Adopted"%>
-    <p>Adopted</p>
+    <p><%=@pet.name%> was adopted by <%=@pet.owner%></p>
   <%else%>
     <p><%=@pet.name%> is currently <%=@pet.status%></p>
   <%end%>
 </article>
-
-<!-- show adoption details -->
