@@ -1,3 +1,24 @@
 <nav class="nav--second">
   <h1>New Adoption</h1>
 </nav>
+
+<form action="/adoptions" method="post">
+  <label for="Pets">Select a pet</label>
+  <select name="pet_id">
+    <% for pet in @pets %>
+      <%if pet.status() == "Ready to Adopt"%>
+        <option value="<%=pet.id()%>"><%=pet.name()%> the <%=pet.type()%></option>
+      <%end%>
+    <%end%>
+  </select>
+
+  <label for="Owner">Select an owner</label>
+  <select name="owner_id">
+    <% @owners.each do |owner|%>
+    <option value="<%=owner.id()%>"><%=owner.name()%></option>
+    <%end%>
+  </select>
+
+<input type="submit" value="Adopt">
+
+</form>

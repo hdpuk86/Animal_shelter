@@ -7,11 +7,9 @@ nav a, a:visited {
   color: #ED6A5A;
 }
 
-.nav--main {
-  /*height: 300px;*/
-  /*background: url('/images/pet_banner.jpg');
-  background-position: center;
-  background-repeat: no-repeat;*/
+.nav--second {
+  border-top: hidden;
+  border-bottom: 4px solid #F4F1BB;
 }
 
 .ul--nav {
