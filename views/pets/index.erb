@@ -10,6 +10,7 @@
     <th>Admission Date</th>
     <th>Status</th>
   </tr>
+  <%@pets = @pets.sort_by {|pet| pet.admission_date()}%>
   <%for pet in @pets%>
     <tr>
       <td><%=pet.name%></td>

@@ -36,16 +36,63 @@ pet3 = Pet.new({
   })
 pet3.save()
 
+pet4 = Pet.new({
+  "name" => "Rosie",
+  "type" => "Dog",
+  "breed" => "Labrador",
+  "status" => "Ready to Adopt",
+  "admission_date" => "2017-10-10"
+  })
+pet4.save()
+
+pet5 = Pet.new({
+  "name" => "Harry",
+  "type" => "Dog",
+  "breed" => "Bulldog",
+  "status" => "In Training",
+  "admission_date" => "2017-09-30"
+  })
+pet5.save()
+
+pet6 = Pet.new({
+  "name" => "Fisher",
+  "type" => "Cat",
+  "breed" => "Ginger",
+  "status" => "Ready to Adopt",
+  "admission_date" => "2017-10-02"
+  })
+pet6.save()
+
 # owners
 owner1 = Owner.new({
   "name" => "Gary Smith"
   })
 owner1.save()
 
-  owner2 = Owner.new({
-    "name" => "Sarah Colins"
-    })
+owner2 = Owner.new({
+  "name" => "Sarah Colins"
+  })
 owner2.save()
+
+owner3 = Owner.new({
+  "name" => "Ray Matthews"
+  })
+owner3.save()
+
+owner4 = Owner.new({
+  "name" => "Amy Fowler"
+  })
+owner4.save()
+
+owner5 = Owner.new({
+  "name" => "Jenny Owen"
+  })
+owner5.save()
+
+owner6 = Owner.new({
+  "name" => "Jess Pine"
+  })
+owner6.save()
 
 # adoptions
 adoption1 = Adoption.new({
