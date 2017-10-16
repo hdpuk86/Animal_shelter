@@ -65,4 +65,10 @@ class Adoption
     return Owner.new(result)
   end
 
+  def self.latest()
+    adoptions = Adoption.all()
+    adoptions = adoptions.sort_by {|adoption| adoption.adoption_date()}
+    return adoptions.last()
+  end
+
 end
