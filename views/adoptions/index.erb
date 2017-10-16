@@ -1,5 +1,5 @@
 <nav class="nav--second">
-  
+
 </nav>
 
 <div class="table">
@@ -7,13 +7,13 @@
   <tr>
     <th>Owner</th>
     <th>Pet</th>
-    <th>Type</th>
+    <th></th>
   </tr>
   <%for adoption in @adoptions%>
   <tr class="bodyRows">
     <td><%=adoption.owner.name()%></td>
     <td><%=adoption.pet.name%></td>
-    <td><%=adoption.pet.type%></td>
+    <td><img class="petPhoto"src="<%=adoption.pet.image%>" alt="picture of pet"></td>
   </tr>
   <%end%>
 </table>

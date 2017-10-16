@@ -1,25 +1,27 @@
 <nav class="nav--second">
 
 </nav>
-<div class="adopt">
-<form action="/adoptions" method="post">
-  <label for="Pets">Select a pet</label>
-  <select name="pet_id">
-    <% for pet in @pets %>
-      <%if pet.status() == "Ready to Adopt"%>
+<article id="adoptionPage">
+  <div class="adopt">
+    <form action="/adoptions" method="post">
+      <label for="Pets">Select a pet</label>
+      <select name="pet_id">
+        <% for pet in @pets %>
+        <%if pet.status() == "Ready to Adopt"%>
         <option value="<%=pet.id()%>"><%=pet.name()%> the <%=pet.type()%></option>
-      <%end%>
-    <%end%>
-  </select>
-
-  <label for="Owner">Select an owner</label>
-  <select name="owner_id">
-    <% @owners.each do |owner|%>
-    <option value="<%=owner.id()%>"><%=owner.name()%></option>
-    <%end%>
-  </select>
-
-<input type="submit" value="Adopt"/>
-
-</form>
-</div>
+        <%end%>
+        <%end%>
+      </select>
+      <label for="Owner">Select an owner</label>
+      <select name="owner_id">
+        <% @owners.each do |owner|%>
+        <option value="<%=owner.id()%>"><%=owner.name()%></option>
+        <%end%>
+      </select>
+      <input type="submit" value="Adopt"/>
+    </form>
+  </div>
+  <div>
+    <img src="/images/pet_photo.png" alt="cat and dog picture">
+  </div>
+</article>

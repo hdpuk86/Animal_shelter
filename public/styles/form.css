@@ -5,9 +5,13 @@ form {
   padding: 20px;
 }
 
-.form, .delete, .adopt{
+.form, .delete, .adopt {
   display: flex;
   justify-content: center;
+}
+
+.adopt {
+  margin: 30px 0px 150px 0px;
 }
 
 #delete {
