@@ -1,13 +1,27 @@
 header {
+  height: 300px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 
+header h1 {
+  margin: 0px;
+  color: #ED6A5A;
+}
+
 .petPhoto {
+  object-fit: contain;
   width: 200px;
+  height: 200px;
 }
 
 #image {
   margin: 0px 30px;
+}
+
+#banner {
+  background-image: url("/images/pet_banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }

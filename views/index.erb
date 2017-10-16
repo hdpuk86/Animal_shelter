@@ -1,15 +1,12 @@
-<nav class="nav--second">
-
-</nav>
 <div id="homepage">
   <article class="homebox">
     <a href="/pets/<%=@newest.id%>"><h3>Meet our Newest Rescue:</h3>
-      <h3><%=@newest.name%></h3><img src="<%=@newest.image%>" alt="image of newest pet"></a>
+      <h3><%=@newest.name%></h3><img class="petPhoto" src="<%=@newest.image%>" alt="image of newest pet"></a>
     </article>
     <article class="homebox">
       <%@adopted = Pet.find(@latest.pet_id)%>
       <a href="/pets/<%=@adopted.id%>">  <h3>Our latest adoption:</h3>
         <h3><%=@adopted.name%></h3>
-        <img src="<%=@adopted.image%>" alt="image of adopted pet"></a>
+        <img class="petPhoto" src="<%=@adopted.image%>" alt="image of adopted pet"></a>
       </article>
     </div>
