@@ -67,6 +67,15 @@ class Pet
     return Owner.new(result).name()
   end
 
+  def self.most_recent()
+    #retrieve all pets
+    pets = self.all()
+    #sort pets by admission_date
+    pets = pets.sort_by {|pet| pet.admission_date()}
+    #return the most recent
+    return pets.last()
+  end
+
 end
 
 # strftime - admission_date.strftime("%d/%m/%Y")
