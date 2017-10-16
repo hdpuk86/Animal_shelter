@@ -109,7 +109,8 @@ owner6.save()
 # adoptions
 adoption1 = Adoption.new({
   "pet_id" => pet3.id(),
-  "owner_id" => owner1.id()
+  "owner_id" => owner1.id(),
+  "adoption_date" => "2017-08-26"
   })
 adoption1.save()
 

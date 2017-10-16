@@ -7,12 +7,15 @@
   <tr>
     <th>Owner</th>
     <th>Pet</th>
+    <th>Date</th>
     <th></th>
   </tr>
+  <%@adoptions = @adoptions.sort_by {|adoption| adoption.adoption_date()}%>
   <%for adoption in @adoptions%>
   <tr class="bodyRows">
     <td><%=adoption.owner.name()%></td>
-    <td><%=adoption.pet.name%></td>
+    <td><%=adoption.pet.name()%></td>
+    <td><%=adoption.adoption_date()%></td>
     <td><img class="petPhoto"src="<%=adoption.pet.image%>" alt="picture of pet"></td>
   </tr>
   <%end%>
