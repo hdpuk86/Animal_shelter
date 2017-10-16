@@ -6,10 +6,12 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>Looking For</th>
   </tr>
   <% for owner in @owners %>
   <tr class="bodyRows">
     <td><%=owner.name%></td>
+    <td><%=owner.looking_for%></td>
   </tr>
   <% end %>
 </table>

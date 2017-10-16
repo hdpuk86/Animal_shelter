@@ -19,8 +19,8 @@ end
 post '/adoptions' do
   adoption = Adoption.new(params)
   adoption.save()
-  pet = adoption.pet
-  pet.status = "Adopted"
-  pet.update()
-  redirect to url('/adoptions')
+  pet = adoption.pet()
+  owner = adoption.owner()
+  owner.adopt(pet)
+redirect to('/adoptions')
 end
