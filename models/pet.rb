@@ -3,7 +3,7 @@ require 'Date'
 
 class Pet
 
-  attr_accessor :name, :status
+  attr_accessor :name, :status, :image
   attr_reader :id, :type, :breed, :admission_date
 
   def initialize(options)
@@ -13,12 +13,13 @@ class Pet
     @breed = options['breed']
     @status = options['status']
     @admission_date = Date.parse(options['admission_date'])
+    @image = options['image']
   end
 
   def save()
-    sql = "INSERT INTO pets (name, type, breed, status, admission_date)
-    VALUES ($1, $2, $3, $4, $5) RETURNING id;"
-    values = [@name, @type, @breed, @status, @admission_date]
+    sql = "INSERT INTO pets (name, type, breed, status, admission_date, image)
+    VALUES ($1, $2, $3, $4, $5, $6) RETURNING id;"
+    values = [@name, @type, @breed, @status, @admission_date, @image]
     result = Sql_runner.run(sql, "save_pet", values)
     @id = result[0]['id'].to_i
   end
@@ -36,9 +37,9 @@ class Pet
   end
 
   def update()
-    sql = "UPDATE pets SET (name, type, breed, status, admission_date)
-    =($1, $2, $3, $4, $5) WHERE id = $6;"
-    values = [@name, @type, @breed, @status, @admission_date, @id]
+    sql = "UPDATE pets SET (name, type, breed, status, admission_date, image)
+    =($1, $2, $3, $4, $5, $6) WHERE id = $7;"
+    values = [@name, @type, @breed, @status, @admission_date, @image, @id]
     Sql_runner.run(sql, "update_pet", values)
   end
 

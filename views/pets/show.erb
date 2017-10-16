@@ -5,6 +5,10 @@
 
 <h1><%=@pet.name()%></h1>
 <article>
+  <div id="image">
+    <img class="petPhoto"src="<%=@pet.image%>" alt="pet photo">
+  </div>
+  <div id="text">
   <p><%=@pet.name()%> is a <%=@pet.breed()%></p>
   <p>Admission Date: <%=@pet.admission_date%></p>
   <%if @pet.status == "Adopted"%>
@@ -12,4 +16,5 @@
   <%else%>
     <p><%=@pet.name%> is currently <%=@pet.status%></p>
   <%end%>
+</div>
 </article>

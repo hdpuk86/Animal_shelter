@@ -14,7 +14,8 @@ pet1 = Pet.new({
   "type" => "Dog",
   "breed" => "Husky",
   "status" => "Ready to Adopt",
-  "admission_date" => "2017-09-03"
+  "admission_date" => "2017-09-03",
+  "image" => "/images/husky.jpg"
   })
 pet1.save()
 
@@ -23,7 +24,8 @@ pet2 = Pet.new({
   "type" => "Cat",
   "breed" => "Tabby",
   "status" => "In Training",
-  "admission_date" => "2017-09-27"
+  "admission_date" => "2017-09-27",
+  "image" => "/images/tabby.jpg"
   })
 pet2.save()
 
@@ -32,7 +34,8 @@ pet3 = Pet.new({
   "type" => "Cat",
   "breed" => "British Shorthair",
   "status" => "Adopted",
-  "admission_date" => "2017-07-30"
+  "admission_date" => "2017-07-30",
+  "image" => "/images/shorthair.jpg"
   })
 pet3.save()
 
@@ -41,7 +44,8 @@ pet4 = Pet.new({
   "type" => "Dog",
   "breed" => "Labrador",
   "status" => "Ready to Adopt",
-  "admission_date" => "2017-10-10"
+  "admission_date" => "2017-10-10",
+  "image" => "/images/labrador.jpg"
   })
 pet4.save()
 
@@ -50,7 +54,8 @@ pet5 = Pet.new({
   "type" => "Dog",
   "breed" => "Bulldog",
   "status" => "In Training",
-  "admission_date" => "2017-09-30"
+  "admission_date" => "2017-09-30",
+  "image" => "/images/bulldog.jpg"
   })
 pet5.save()
 
@@ -59,7 +64,8 @@ pet6 = Pet.new({
   "type" => "Cat",
   "breed" => "Ginger",
   "status" => "Ready to Adopt",
-  "admission_date" => "2017-10-02"
+  "admission_date" => "2017-10-02",
+  "image" => "/images/ginger.jpg"
   })
 pet6.save()
 

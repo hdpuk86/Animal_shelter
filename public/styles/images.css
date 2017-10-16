@@ -3,3 +3,11 @@ header {
   align-items: center;
   justify-content: center;
 }
+
+.petPhoto {
+  width: 200px;
+}
+
+#image {
+  margin: 0px 30px;
+}

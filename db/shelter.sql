@@ -8,7 +8,8 @@ name VARCHAR(255),
 type VARCHAR(255),
 breed VARCHAR(255),
 status VARCHAR(255),
-admission_date DATE
+admission_date DATE,
+image VARCHAR(255)
 );
 
 CREATE TABLE owners(
