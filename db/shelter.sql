@@ -8,7 +8,7 @@ name VARCHAR(255),
 type VARCHAR(255),
 breed VARCHAR(255),
 status VARCHAR(255),
-admission_date DATE 
+admission_date DATE
 );
 
 CREATE TABLE owners(
@@ -18,6 +18,6 @@ CREATE TABLE owners(
 
 CREATE TABLE adoptions(
   id SERIAL4 PRIMARY KEY,
-  pet_id INT4 REFERENCES pets(id),
-  owner_id INT4 REFERENCES owners(id)
+  pet_id INT4 REFERENCES pets(id) ON DELETE CASCADE,
+  owner_id INT4 REFERENCES owners(id) ON DELETE CASCADE
 );

@@ -33,3 +33,10 @@ post '/pets/:id' do
   pet.update()
   erb(:"pets/update")
 end
+
+# delete
+post '/pets/:id/delete' do
+  @pet = Pet.find(params['id'])
+  @pet.delete()
+  redirect to('/pets')
+end
