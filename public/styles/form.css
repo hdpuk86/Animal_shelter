@@ -5,14 +5,13 @@ form {
   padding: 20px;
 }
 
-.form {
+.form, .delete, .adopt{
   display: flex;
   justify-content: center;
 }
 
-.adopt {
-  display: flex;
-  justify-content: center;
+#delete {
+  color: #ED6A5A;
 }
 
 select {

@@ -34,7 +34,11 @@ post '/pets/:id' do
   erb(:"pets/update")
 end
 
-# delete
+get '/pets/:id/delete' do
+  @pet = Pet.find(params['id'])
+  erb(:"pets/delete")
+end
+
 post '/pets/:id/delete' do
   @pet = Pet.find(params['id'])
   @pet.delete()

@@ -2,11 +2,6 @@ nav {
   border-top: 4px solid #F4F1BB;
 }
 
-nav a, a:visited {
-  text-decoration: none;
-  color: #ED6A5A;
-}
-
 .nav--second {
   display: flex;
   justify-content: center;
