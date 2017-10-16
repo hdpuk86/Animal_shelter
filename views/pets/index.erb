@@ -4,6 +4,7 @@
 <div class="table">
   <table>
       <tr>
+        <th><img src="<%=pet.image%>" alt="pet picture"></th>
         <th>Name</th>
         <th>Type</th>
         <th>Breed</th>
@@ -14,6 +15,7 @@
     <%@pets = @pets.sort_by {|pet| pet.admission_date()}%>
     <%for pet in @pets%>
       <tr class="bodyRows">
+        <td></td>
         <td><%=pet.name%></td>
         <td><%=pet.type%></td>
         <td><%=pet.breed%></td>
