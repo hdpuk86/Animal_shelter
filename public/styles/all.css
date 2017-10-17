@@ -4,6 +4,10 @@
   font-family: 'Rajdhani', sans-serif;
 }
 
+body {
+  padding-bottom: 250px;
+}
+
 h1 {
   color: #5D576B;
   font-family: 'Russo One', sans-serif;

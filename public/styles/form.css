@@ -5,7 +5,7 @@ form {
   padding: 20px;
 }
 
-.form, .delete, .adopt, #adoption{
+.form, .delete, .adopt {
   display: flex;
   justify-content: center;
 }
@@ -24,12 +24,12 @@ label {
 
 select {
   font-size: 16px;
-  margin: 10px;
+  margin: 20px;
 }
 
 input {
   font-size: 20px;
-  margin: 10px;
+  margin: 20px;
 }
 
 input[type="submit"] {
@@ -40,7 +40,6 @@ input[type="submit"] {
   border-radius: 10px;
   background-color: #F4F1BB;
   font-size: 20px;
-  /*float: right;*/
 }
 
 .submit {
