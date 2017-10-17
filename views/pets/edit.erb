@@ -27,7 +27,7 @@
 </div>
 <div>
   <label for="Age">Age</label>
-  <input type="number" name="age"/>
+  <input type="number" name="age" value="<%=@pet.age%>"/>
 </div>
 <div>
   <label for="Sex">Sex</label>
@@ -36,6 +36,10 @@
     <option value="Female">Female</option>
     <option value="Male">Male</option>
   </select>
+</div>
+<div>
+  <label for="Image">Image URL</label>
+  <input type="text" name="image" value="<%=@pet.image%>"/>
 </div>
 <div>
   <label for="admissionDate">Admission Date</label>
