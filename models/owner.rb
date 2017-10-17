@@ -3,17 +3,18 @@ require_relative '../db/sql_runner'
 class Owner
 
   attr_reader :id
-  attr_accessor :name, :wants
+  attr_accessor :name, :type, :sex
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
-    @wants = options['wants']
+    @type = options['type']
+    @sex = options['sex']
   end
 
   def save()
-    sql = "INSERT INTO owners (name, wants) VALUES ($1, $2) RETURNING id;"
-    values = [@name, @wants]
+    sql = "INSERT INTO owners (name, type, sex) VALUES ($1, $2, $3) RETURNING id;"
+    values = [@name, @type, @sex]
     result = Sql_runner.run(sql, "save_owner", values)
     @id = result[0]['id'].to_i
   end
@@ -25,8 +26,8 @@ class Owner
   end
 
   def update()
-    sql = "UPDATE owners SET (name, wants) = ($1, $2) WHERE id = $3;"
-    values = [@name, @wants, @id]
+    sql = "UPDATE owners SET (name, type, sex) = ($1, $2, $3) WHERE id = $4;"
+    values = [@name, @type, @sex, @id]
     Sql_runner.run(sql, "update_owner", values)
   end
 
@@ -53,8 +54,19 @@ class Owner
   def adopt(pet)
       pet.status = "Adopted"
       pet.update()
-      @wants = "None"
+      @type = "None"
       self.update()
+  end
+
+  def find_matches()
+    pets = Pet.all
+    matches = []
+    for pet in pets
+      if pet.type == self.type && pet.sex == self.sex
+        matches << pet
+      end
+    end
+    return matches
   end
 
 end

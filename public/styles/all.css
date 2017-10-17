@@ -16,6 +16,11 @@ h1 {
   margin: 40px;
 }
 
+h2 {
+  color: #5D576B;
+  text-align: center;
+}
+
 h3 {
   font-size: 30px;
   color: #5D576B;
@@ -58,13 +63,25 @@ article {
   justify-content: center;
 }
 
-.homebox {
+#matchesbox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 4px solid #9BC1BC;
+  border-radius: 10px;
+}
+
+.box, .homebox{
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 4px solid #9BC1BC;
   border-radius: 10px;
   margin: 10px;
+}
+
+.box:hover {
+border: 4px solid #ED6A5A;
 }
 
 .homebox h3 {
@@ -78,4 +95,11 @@ article {
 
 .homebox a:hover {
   background-color: #F4F1BB;
+}
+
+.matches {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

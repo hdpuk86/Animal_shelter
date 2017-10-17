@@ -132,37 +132,43 @@ pet8.save()
 # owners
 owner1 = Owner.new({
   "name" => "Gary Smith",
-  "wants" => "Dog"
+  "type" => "Dog",
+  "sex" => "Male"
   })
 owner1.save()
 
 owner2 = Owner.new({
   "name" => "Sarah Colins",
-  "wants" => "Dog"
+  "type" => "Dog",
+  "sex" => "Female"
   })
 owner2.save()
 
 owner3 = Owner.new({
   "name" => "Ray Matthews",
-  "wants" => "Cat"
+  "type" => "Cat",
+  "sex" => "Male"
   })
 owner3.save()
 
 owner4 = Owner.new({
   "name" => "Amy Fowler",
-  "wants" => "Cat"
+  "type" => "Cat",
+  "sex" => "Female"
   })
 owner4.save()
 
 owner5 = Owner.new({
   "name" => "Jenny Owen",
-  "wants" => "Cat and Dog"
+  "type" => "Cat",
+  "sex" => "Male"
   })
 owner5.save()
 
 owner6 = Owner.new({
   "name" => "Jess Pine",
-  "wants" => "Any"
+  "type" => "Dog",
+  "sex" => "Male"
   })
 owner6.save()
 

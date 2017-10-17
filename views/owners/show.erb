@@ -1,11 +1,29 @@
 <nav class="nav--second">
-  <button class="button button--second"><a href="/owners/<%=@owner.id%>/edit"/edit>Edit <%=@owner.name%></a></button>
-  <button class="button button--second"><a href="/owners/<%=@owner.id%>/delete"/edit>Delete <%=@owner.name%></a></button>
+  <button class="button button--second"><a href="/owners/<%=@owner.id%>/edit">Edit <%=@owner.name%></a></button>
+  <button class="button button--second"><a href="/owners/<%=@owner.id%>/delete">Delete <%=@owner.name%></a></button>
 </nav>
 
 <h1><%=@owner.name()%></h1>
 <article>
   <div class="text">
-    <p>Looking for a <%=@owner.wants%></p>
+    <p><%=@owner.name()%> is looking for...</p>
+    <br>
+    <p>Type: <%=@owner.type%></p>
+    <p>Sex: <%=@owner.sex%></p>
   </div>
 </article>
+<br/>
+<div class="matches">
+  <article id="matchesbox">
+    <h2>Matches</h2>
+    <br/>
+    <div class="matches">
+    <%matches = @owner.find_matches%>
+    <%for match in matches%>
+    <article class="box">
+      <a href="/pets/<%=match.id%>"/><h2><%=match.name%></h2><img class ="petPhoto" src="<%=match.image%>" alt="picture of pet"></a>
+    </article>
+    <%end%>
+  </div>
+  </article>
+</div>
