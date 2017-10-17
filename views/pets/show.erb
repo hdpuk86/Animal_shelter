@@ -12,15 +12,15 @@
     <p>Name: <%=@pet.name()%></p>
     <p>Breed: <%=@pet.breed()%></p>
     <p>Admission Date: <%=@pet.admission_date%></p>
-    <%if @pet.status == "Adopted"%>
-    <p><%=@pet.name%> was adopted by <%=@pet.owner%></p>
-    <%else%>
-    <p><%=@pet.name%> is currently <%=@pet.status%></p>
-    <%end%>
     <p>Age: <%=@pet.age()%></p>
     <p>Sex: <%=@pet.sex()%></p>
     <p>Child friendly: <%=@pet.child_friendly%></p>
-    <p>Good with other animals? <%=@pet.animal_friendly%></p>
-    <p>Will they require more training? <%=@pet.requires_training%></p>
+    <p>Good with other animals: <%=@pet.animal_friendly%></p>
+    <p>Require more training: <%=@pet.requires_training%></p>
+    <%if @pet.status == "Adopted"%>
+    <p>Status: Adopted by <%=@pet.owner%></p>
+    <%else%>
+    <p>Status: <%=@pet.status%></p>
+    <%end%>
   </div>
 </article>
