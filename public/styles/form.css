@@ -14,7 +14,7 @@ form {
   margin: 30px 0px 150px 0px;
 }
 
-#delete {
+.deleteButton {
   color: #ED6A5A;
 }
 

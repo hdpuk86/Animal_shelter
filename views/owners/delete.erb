@@ -1,0 +1,5 @@
+<h3>Are you sure you want to remove <%=@owner.name()%> from the database?</h3>
+
+<form class="delete" action="/owners/<%=@owner.id%>/delete" method="post">
+  <button class="button button--second deleteButton" type="submit">Delete <%=@owner.name%></button>
+</form>
