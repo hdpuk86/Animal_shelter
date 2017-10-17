@@ -15,7 +15,7 @@
       <th></th>
     </tr>
     <%for pet in @pets%>
-      <%if pet.status == "Ready to Adopt"%>
+      <%if pet.status == "In Training"%>
         <tr class="bodyRows">
           <td><img class="petPhoto" src="<%=pet.image%>" alt="picture of pet"></td>
           <td><%=pet.name()%></td>

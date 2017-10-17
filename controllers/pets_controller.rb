@@ -13,6 +13,11 @@ get '/pets/adoptable' do
   erb(:"pets/adoptable")
 end
 
+get '/pets/training' do
+  @pets = Pet.all()
+  erb(:"pets/training")
+end
+
 get '/pets/new' do
   erb (:"pets/new")
 end
