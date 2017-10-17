@@ -26,6 +26,18 @@
   <input type="text" name="breed" value="<%=@pet.breed()%>"/>
 </div>
 <div>
+  <label for="Age">Age</label>
+  <input type="number" name="age"/>
+</div>
+<div>
+  <label for="Sex">Sex</label>
+  <select name="sex">
+    <option value="" selected disabled hidden>Select</option>
+    <option value="Female">Female</option>
+    <option value="Male">Male</option>
+  </select>
+</div>
+<div>
   <label for="admissionDate">Admission Date</label>
   <input type="date" name="admission_date" value="<%=@pet.admission_date()%>"/>
 </div>
@@ -36,6 +48,30 @@
     <option value="Recovering">In Hospital</option>
     <option value="In Training">In Training</option>
     <option value="Ready to Adopt">Ready to Adopt</option>
+  </select>
+</div>
+<div>
+  <label for="Animals">Are they good with other animals?</label>
+  <select name="animal_friendly">
+    <option value="" selected disabled hidden>Select</option>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+  </select>
+</div>
+<div>
+  <label for="Children">Are they safe around children?</label>
+  <select name="child_friendly">
+    <option value="" selected disabled hidden>Select</option>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+  </select>
+</div>
+<div>
+  <label for="Animals">Do they need extra training?</label>
+  <select name="requires_training">
+    <option value="" selected disabled hidden>Select</option>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
   </select>
 </div>
 <div>

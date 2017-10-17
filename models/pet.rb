@@ -3,8 +3,8 @@ require 'Date'
 
 class Pet
 
-  attr_accessor :name, :status, :image
-  attr_reader :id, :type, :breed, :admission_date
+  attr_accessor :name, :status, :image, :type, :breed, :admission_date, :child_friendly, :animal_friendly, :requires_training, :age
+  attr_reader :id, :sex
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -13,13 +13,18 @@ class Pet
     @breed = options['breed']
     @status = options['status']
     @admission_date = Date.parse(options['admission_date'])
+    @child_friendly = options['child_friendly'].to_i
+    @animal_friendly = options['animal_friendly'].to_i
+    @requires_training = options['requires_training'].to_i
+    @age = options['age'].to_i
+    @sex = options['sex']
     @image = options['image']
   end
 
   def save()
-    sql = "INSERT INTO pets (name, type, breed, status, admission_date, image)
-    VALUES ($1, $2, $3, $4, $5, $6) RETURNING id;"
-    values = [@name, @type, @breed, @status, @admission_date, @image]
+    sql = "INSERT INTO pets (name, type, breed, status, admission_date, child_friendly, animal_friendly, requires_training, age, sex, image)
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING id;"
+    values = [@name, @type, @breed, @status, @admission_date, @child_friendly, @animal_friendly, @requires_training, @age, @sex, @image]
     result = Sql_runner.run(sql, "save_pet", values)
     @id = result[0]['id'].to_i
   end
@@ -37,9 +42,9 @@ class Pet
   end
 
   def update()
-    sql = "UPDATE pets SET (name, type, breed, status, admission_date, image)
-    =($1, $2, $3, $4, $5, $6) WHERE id = $7;"
-    values = [@name, @type, @breed, @status, @admission_date, @image, @id]
+    sql = "UPDATE pets SET (name, type, breed, status, admission_date, child_friendly, animal_friendly, requires_training, age, sex, image)
+    =($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) WHERE id = $12;"
+    values = [@name, @type, @breed, @status, @admission_date, @child_friendly, @animal_friendly, @requires_training, @age, @sex, @image, @id]
     Sql_runner.run(sql, "update_pet", values)
   end
 

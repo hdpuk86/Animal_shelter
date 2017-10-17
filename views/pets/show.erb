@@ -16,5 +16,22 @@
   <%else%>
     <p><%=@pet.name%> is currently <%=@pet.status%></p>
   <%end%>
+  <p>Age: <%=@pet.age()%></p>
+  <p>Sex: <%=@pet.sex()%></p>
+  <%if @pet.child_friendly == 1%>
+  <p>Child friendly</p>
+  <%else%>
+  <p>Not good with kids</p>
+  <%end%>
+  <%if @pet.animal_friendly == 1%>
+  <p>Animal friendly</p>
+  <%else%>
+  <p>Not good with other animals</p>
+  <%end%>
+  <%if @pet.requires_training == 1%>
+  <p>Needs more training</p>
+  <%else%>
+  <p>Well trained</p>
+  <%end%>
 </div>
 </article>

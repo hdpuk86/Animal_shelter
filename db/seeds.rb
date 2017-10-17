@@ -15,6 +15,11 @@ pet1 = Pet.new({
   "breed" => "Husky",
   "status" => "Ready to Adopt",
   "admission_date" => "2017-09-03",
+  "child_friendly" => "1",
+  "animal_friendly" => "0",
+  "requires_training" => "1",
+  "age" => "5",
+  "sex" => "Male",
   "image" => "/images/husky.jpg"
   })
 pet1.save()
@@ -25,6 +30,11 @@ pet2 = Pet.new({
   "breed" => "Tabby",
   "status" => "In Training",
   "admission_date" => "2017-09-27",
+  "child_friendly" => "0",
+  "animal_friendly" => "0",
+  "requires_training" => "1",
+  "age" => "2",
+  "sex" => "Female",
   "image" => "/images/tabby.jpg"
   })
 pet2.save()
@@ -35,6 +45,11 @@ pet3 = Pet.new({
   "breed" => "British Shorthair",
   "status" => "Adopted",
   "admission_date" => "2017-07-30",
+  "child_friendly" => "1",
+  "animal_friendly" => "1",
+  "requires_training" => "0",
+  "age" => "7",
+  "sex" => "Male",
   "image" => "/images/shorthair.jpg"
   })
 pet3.save()
@@ -45,6 +60,11 @@ pet4 = Pet.new({
   "breed" => "Labrador",
   "status" => "Ready to Adopt",
   "admission_date" => "2017-10-10",
+  "child_friendly" => "1",
+  "animal_friendly" => "1",
+  "requires_training" => "0",
+  "age" => "1",
+  "sex" => "Female",
   "image" => "/images/labrador.jpg"
   })
 pet4.save()
@@ -55,6 +75,11 @@ pet5 = Pet.new({
   "breed" => "Bulldog",
   "status" => "In Training",
   "admission_date" => "2017-09-30",
+  "child_friendly" => "1",
+  "animal_friendly" => "1",
+  "requires_training" => "1",
+  "age" => "3",
+  "sex" => "Male",
   "image" => "/images/bulldog.jpg"
   })
 pet5.save()
@@ -65,6 +90,11 @@ pet6 = Pet.new({
   "breed" => "Ginger",
   "status" => "Ready to Adopt",
   "admission_date" => "2017-10-02",
+  "child_friendly" => "1",
+  "animal_friendly" => "0",
+  "requires_training" => "0",
+  "age" => "3",
+  "sex" => "Male",
   "image" => "/images/ginger.jpg"
   })
 pet6.save()
@@ -75,6 +105,11 @@ pet7 = Pet.new({
   "breed" => "Persian",
   "status" => "Recovering",
   "admission_date" => "2017-10-07",
+  "child_friendly" => "0",
+  "animal_friendly" => "0",
+  "requires_training" => "1",
+  "age" => "10",
+  "sex" => "Male",
   "image" => "/images/persian.jpg"
   })
 pet7.save()
@@ -85,6 +120,11 @@ pet8 = Pet.new({
   "breed" => "German Sheperd",
   "status" => "Recovering",
   "admission_date" => "2017-10-12",
+  "child_friendly" => "1",
+  "animal_friendly" => "1",
+  "requires_training" => "1",
+  "age" => "9",
+  "sex" => "Male",
   "image" => "/images/german_shepard.jpg"
   })
 pet8.save()
