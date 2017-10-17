@@ -7,11 +7,13 @@
   <tr>
     <th>Name</th>
     <th>Looking For</th>
+    <th></th>
   </tr>
   <% for owner in @owners %>
   <tr class="bodyRows">
     <td><%=owner.name%></td>
     <td><%=owner.wants%></td>
+    <td><a href="owners/<%=owner.id%>">Show details</a></td>
   </tr>
   <% end %>
 </table>

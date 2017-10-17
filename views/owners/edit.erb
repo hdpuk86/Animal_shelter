@@ -1,0 +1,20 @@
+<div class="form">
+  <form action="/owners/<%=@owner.id%>" method="post">
+    <div>
+      <label for="Name">Enter Full Name</label>
+      <input type="text" name="name" value="<%=@owner.name%>">
+    </div>
+    <div>
+      <label for="Wants">Looking For</label>
+      <select name="wants">
+        <option value="Dog">Dog</option>
+        <option value="Cat">Cat</option>
+        <option value="Both">Both</option>
+        <option value="Either">Either</option>
+      </select>
+    </div>
+    <div>
+      <input type="submit" value="Enter">
+    </div>
+  </form>
+</div>
