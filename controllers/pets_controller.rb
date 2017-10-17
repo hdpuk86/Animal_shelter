@@ -2,10 +2,15 @@ require 'sinatra'
 require 'sinatra/contrib/all'
 require_relative '../models/pet'
 
- 
+
 get '/pets' do
   @pets = Pet.all()
   erb( :"pets/index")
+end
+
+get '/pets/adoptable' do
+  @pets = Pet.all()
+  erb(:"pets/adoptable")
 end
 
 get '/pets/new' do

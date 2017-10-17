@@ -1,0 +1,29 @@
+<nav class="nav--second">
+  <button class="button button--second"><a href="/pets">View All</a></button>
+  <button class="button button--second"><a href="/pets/adoptable">View Adoptable</a></button>
+  <button class="button button--second"><a href="pets/new">Add New Pet</a></button>
+</nav>
+<div class="table">
+  <table>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Breed</th>
+      <th>Admission Date</th>
+      <th></th>
+    </tr>
+    <%for pet in @pets%>
+      <%if pet.status == "Ready to Adopt"%>
+        <tr class="bodyRows">
+          <td><img class="petPhoto" src="<%=pet.image%>" alt="picture of pet"></td>
+          <td><%=pet.name()%></td>
+          <td><%=pet.type()%></td>
+          <td><%=pet.breed()%></td>
+          <td><%=pet.admission_date()%></td>
+          <td><a href="/pets/<%=pet.id%>">Show Details</a></td>
+        </tr>
+      <%end%>
+    <%end%>
+  </table>
+</div>
