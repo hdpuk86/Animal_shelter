@@ -69,6 +69,26 @@ pet6 = Pet.new({
   })
 pet6.save()
 
+pet7 = Pet.new({
+  "name" => "Bob",
+  "type" => "Cat",
+  "breed" => "Persian",
+  "status" => "Recovering",
+  "admission_date" => "2017-10-07",
+  "image" => "/images/persian.jpg"
+  })
+pet7.save()
+
+pet8 = Pet.new({
+  "name" => "Buddy",
+  "type" => "Dog",
+  "breed" => "German Sheperd",
+  "status" => "Recovering",
+  "admission_date" => "2017-10-12",
+  "image" => "/images/german_shepard.jpg"
+  })
+pet8.save()
+
 # owners
 owner1 = Owner.new({
   "name" => "Gary Smith",

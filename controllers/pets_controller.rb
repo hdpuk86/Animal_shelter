@@ -18,6 +18,11 @@ get '/pets/training' do
   erb(:"pets/training")
 end
 
+get '/pets/hospital' do
+  @pets = Pet.all()
+  erb(:"pets/hospital")
+end
+
 get '/pets/new' do
   erb (:"pets/new")
 end
