@@ -15,7 +15,7 @@ image VARCHAR(255)
 CREATE TABLE owners(
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255),
-  looking_for VARCHAR(255)
+  wants VARCHAR(255)
 );
 
 CREATE TABLE adoptions(

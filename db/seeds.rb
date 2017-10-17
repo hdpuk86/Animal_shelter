@@ -72,37 +72,37 @@ pet6.save()
 # owners
 owner1 = Owner.new({
   "name" => "Gary Smith",
-  "looking_for" => "Dog"
+  "wants" => "Dog"
   })
 owner1.save()
 
 owner2 = Owner.new({
   "name" => "Sarah Colins",
-  "looking_for" => "Dog"
+  "wants" => "Dog"
   })
 owner2.save()
 
 owner3 = Owner.new({
   "name" => "Ray Matthews",
-  "looking_for" => "Cat"
+  "wants" => "Cat"
   })
 owner3.save()
 
 owner4 = Owner.new({
   "name" => "Amy Fowler",
-  "looking_for" => "Cat"
+  "wants" => "Cat"
   })
 owner4.save()
 
 owner5 = Owner.new({
   "name" => "Jenny Owen",
-  "looking_for" => "Cat and Dog"
+  "wants" => "Cat and Dog"
   })
 owner5.save()
 
 owner6 = Owner.new({
   "name" => "Jess Pine",
-  "looking_for" => "Any"
+  "wants" => "Any"
   })
 owner6.save()
 
