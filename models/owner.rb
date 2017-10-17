@@ -62,7 +62,7 @@ class Owner
     pets = Pet.all
     matches = []
     for pet in pets
-      if pet.type == self.type && pet.sex == self.sex
+      if pet.status != "Adopted" && pet.type == self.type && pet.sex == self.sex
         matches << pet
       end
     end
