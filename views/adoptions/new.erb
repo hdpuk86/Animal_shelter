@@ -1,29 +1,29 @@
-<nav class="nav--second">
-
-</nav>
 <article id="adoptionPage">
   <div class="adopt">
     <form action="/adoptions" method="post">
-      <label for="Pets">Select a pet</label>
-      <select name="pet_id">
-        <option value="" selected disabled hidden>Available</option>
-        <% for pet in @pets %>
-        <%if pet.status() == "Ready to Adopt"%>
-        <option value="<%=pet.id()%>"><%=pet.name()%> the <%=pet.type()%></option>
-        <%end%>
-        <%end%>
-      </select>
-      <label for="Owner">Select an owner</label>
-      <select name="owner_id">
-        <option value="" selected disabled hidden>Select</option>
-        <% @owners.each do |owner|%>
-        <option value="<%=owner.id()%>"><%=owner.name()%></option>
-        <%end%>
-      </select>
-      <label for="Date">Date of Adoption</label>
-      <input type="date" name="adoption_date"/>
-       <!-- Can enter a date from before pet arrived -->
-      <input type="submit" value="Adopt"/>
+      <div>
+        <label for="Pets">Select a pet</label>
+        <select name="pet_id">
+          <option value="" selected disabled hidden>Available</option>
+          <% for pet in @pets %>
+          <%if pet.status() == "Ready to Adopt"%>
+          <option value="<%=pet.id()%>"><%=pet.name()%> the <%=pet.type()%></option>
+          <%end%>
+          <%end%>
+        </select>
+        <label for="Owner">Select an owner</label>
+        <select name="owner_id">
+          <option value="" selected disabled hidden>Select</option>
+          <% @owners.each do |owner|%>
+          <option value="<%=owner.id()%>"><%=owner.name()%></option>
+          <%end%>
+        </select>
+        <label for="Date">Date of Adoption</label>
+        <input type="date" name="adoption_date"/>
+      </div>
+      <div class="submit">
+        <input type="submit" value="Adopt"/>
+      </div>
     </form>
   </div>
   <div>

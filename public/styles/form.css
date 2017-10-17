@@ -5,13 +5,13 @@ form {
   padding: 20px;
 }
 
-.form, .delete, .adopt {
+.form, .delete, .adopt, #adoption{
   display: flex;
   justify-content: center;
 }
 
 .adopt {
-  margin: 30px 0px 150px 0px;
+  margin: 30px 0px 100px 0px;
 }
 
 .deleteButton {
@@ -24,13 +24,26 @@ label {
 
 select {
   font-size: 16px;
+  margin: 10px;
 }
 
 input {
   font-size: 20px;
-  /*margin: 10px;*/
+  margin: 10px;
 }
 
 input[type="submit"] {
+  width: 100px;
+  margin: 5px;
+  padding: 3px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #F4F1BB;
   font-size: 20px;
+  /*float: right;*/
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
 }
