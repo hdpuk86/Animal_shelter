@@ -13,9 +13,9 @@ class Pet
     @breed = options['breed']
     @status = options['status']
     @admission_date = Date.parse(options['admission_date'])
-    @child_friendly = options['child_friendly'].to_i
-    @animal_friendly = options['animal_friendly'].to_i
-    @requires_training = options['requires_training'].to_i
+    @child_friendly = options['child_friendly']
+    @animal_friendly = options['animal_friendly']
+    @requires_training = options['requires_training']
     @age = options['age'].to_i
     @sex = options['sex']
     @image = options['image']
