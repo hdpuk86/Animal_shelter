@@ -6,6 +6,7 @@
     <form action="/adoptions" method="post">
       <label for="Pets">Select a pet</label>
       <select name="pet_id">
+        <option value="" selected disabled hidden>Available</option>
         <% for pet in @pets %>
         <%if pet.status() == "Ready to Adopt"%>
         <option value="<%=pet.id()%>"><%=pet.name()%> the <%=pet.type()%></option>
@@ -14,6 +15,7 @@
       </select>
       <label for="Owner">Select an owner</label>
       <select name="owner_id">
+        <option value="" selected disabled hidden>Select</option>
         <% @owners.each do |owner|%>
         <option value="<%=owner.id()%>"><%=owner.name()%></option>
         <%end%>
