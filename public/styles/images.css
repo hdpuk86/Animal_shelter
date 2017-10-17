@@ -11,13 +11,13 @@ header h1 {
 }
 
 .petPhoto {
-  object-fit: contain;
+  object-fit: cover;
   width: 200px;
   height: 200px;
 }
 
 .image {
-  margin: 0px 30px;
+  margin: 0px 50px;
 }
 
 #banner {
