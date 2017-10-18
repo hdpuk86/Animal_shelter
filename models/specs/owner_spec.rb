@@ -16,7 +16,8 @@ class TestOwner < MiniTest::Test
       })
     @owner1 = Owner.new({
       "name" => "Sarah Colins",
-      "looking_for" => "Dog"
+      "type" => "Dog",
+      "preferred_sex" => "Male"
       })
   end
 
@@ -24,10 +25,13 @@ class TestOwner < MiniTest::Test
     @owner1.adopt(@pet1)
     actual1 = @pet1.status()
     expected1 = "Adopted"
-    actual2 = @owner1.looking_for()
-    expected2 = "None"
+    actual2 = @owner1.type()
+    expected2 = ""
+    actual3 = @owner1.preferred_sex()
+    expected3 = ""
     assert_equal(expected1, actual1)
     assert_equal(expected2, actual2)
+    assert_equal(expected3, actual3)
   end
 
 end
