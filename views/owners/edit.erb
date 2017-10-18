@@ -5,6 +5,14 @@
       <input type="text" name="name" value="<%=@owner.name%>">
     </div>
     <div>
+      <label for="Children">Do you have any children at home?</label>
+      <select name="children">
+        <option value="" selected disabled hidden>Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+    <div>
       <label for="Wants">Looking For</label>
       <select name="type">
         <option value="" selected disabled hidden>Select</option>
@@ -13,8 +21,8 @@
       </select>
     </div>
     <div>
-      <label>Animal's Sex</label>
-      <select name="sex">
+      <label>Preferred Sex of Animal</label>
+      <select name="preferred_sex">
         <option value="" selected disabled hidden>Select</option>
         <option value="Female">Female</option>
         <option value="Male">Male</option>
