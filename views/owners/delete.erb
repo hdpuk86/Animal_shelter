@@ -3,3 +3,5 @@
 <form class="delete" action="/owners/<%=@owner.id%>/delete" method="post">
   <button class="button button--second deleteButton" type="submit">Delete <%=@owner.name%></button>
 </form>
+
+<!-- if owner has adopted a pet and is deleted, adoption is deleted, error for latest adoption if no adoptions in the table!! -->
