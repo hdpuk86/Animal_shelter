@@ -10,8 +10,6 @@ breed VARCHAR(255),
 status VARCHAR(255),
 admission_date DATE,
 child_friendly VARCHAR(255),
-animal_friendly VARCHAR(255),
-requires_training VARCHAR(255),
 age INT2,
 sex VARCHAR(255),
 image VARCHAR(255)
@@ -21,7 +19,7 @@ CREATE TABLE owners(
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255),
   type VARCHAR(255),
-  sex VARCHAR(255) 
+  sex VARCHAR(255)
 );
 
 CREATE TABLE adoptions(

@@ -15,8 +15,6 @@
     <p>Age: <%=@pet.age()%></p>
     <p>Sex: <%=@pet.sex()%></p>
     <p>Child friendly: <%=@pet.child_friendly%></p>
-    <p>Good with other animals: <%=@pet.animal_friendly%></p>
-    <p>Require more training: <%=@pet.requires_training%></p>
     <%if @pet.status == "Adopted"%>
     <p>Status: Adopted by <%=@pet.owner%></p>
     <%else%>

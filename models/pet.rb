@@ -3,7 +3,7 @@ require 'Date'
 
 class Pet
 
-  attr_accessor :name, :status, :image, :type, :breed, :admission_date, :child_friendly, :animal_friendly, :requires_training, :age
+  attr_accessor :name, :status, :image, :type, :breed, :admission_date, :child_friendly, :age
   attr_reader :id, :sex
 
   def initialize(options)
@@ -14,17 +14,15 @@ class Pet
     @status = options['status']
     @admission_date = Date.parse(options['admission_date'])
     @child_friendly = options['child_friendly']
-    @animal_friendly = options['animal_friendly']
-    @requires_training = options['requires_training']
     @age = options['age'].to_i
     @sex = options['sex']
     @image = options['image']
   end
 
   def save()
-    sql = "INSERT INTO pets (name, type, breed, status, admission_date, child_friendly, animal_friendly, requires_training, age, sex, image)
-    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING id;"
-    values = [@name, @type, @breed, @status, @admission_date, @child_friendly, @animal_friendly, @requires_training, @age, @sex, @image]
+    sql = "INSERT INTO pets (name, type, breed, status, admission_date, child_friendly, age, sex, image)
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING id;"
+    values = [@name, @type, @breed, @status, @admission_date, @child_friendly, @age, @sex, @image]
     result = Sql_runner.run(sql, "save_pet", values)
     @id = result[0]['id'].to_i
   end
@@ -42,9 +40,9 @@ class Pet
   end
 
   def update()
-    sql = "UPDATE pets SET (name, type, breed, status, admission_date, child_friendly, animal_friendly, requires_training, age, sex, image)
-    =($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) WHERE id = $12;"
-    values = [@name, @type, @breed, @status, @admission_date, @child_friendly, @animal_friendly, @requires_training, @age, @sex, @image, @id]
+    sql = "UPDATE pets SET (name, type, breed, status, admission_date, child_friendly, age, sex, image)
+    =($1, $2, $3, $4, $5, $6, $7, $8, $9) WHERE id = $10;"
+    values = [@name, @type, @breed, @status, @admission_date, @child_friendly, @age, @sex, @image, @id]
     Sql_runner.run(sql, "update_pet", values)
   end
 
@@ -82,6 +80,3 @@ class Pet
   end
 
 end
-
-# strftime - admission_date.strftime("%d/%m/%Y")
-# Date.parse()
