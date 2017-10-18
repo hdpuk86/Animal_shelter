@@ -141,7 +141,7 @@ owner3.save()
 owner4 = Owner.new({
   "name" => "Amy Fowler",
   "type" => "Cat",
-  "preferred_sex" => "Female",
+  "preferred_sex" => "Male",
   "children" => "No"
   })
 owner4.save()

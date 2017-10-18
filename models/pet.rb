@@ -79,4 +79,30 @@ class Pet
     return pets.last()
   end
 
+  def self.count_rescued()
+    return self.all().count
+  end
+
+  def self.count_in_shelter()
+    all = self.all()
+    in_shelter = []
+    for pet in all
+      if pet.status != "Adopted"
+        in_shelter << pet
+      end
+    end
+    return in_shelter.count()
+  end
+
+  def self.count_adopted()
+    all = self.all()
+    adopted = []
+    for pet in all
+      if pet.status == "Adopted"
+        adopted << pet
+      end
+    end
+    return adopted.count()
+  end
+
 end
