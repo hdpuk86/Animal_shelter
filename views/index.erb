@@ -9,4 +9,12 @@
         <h3><%=@adopted.name%></h3>
         <img class="petPhoto" src="<%=@adopted.image%>" alt="image of adopted pet"></a>
       </article>
+      <article class="homebox">
+      <h3>Total Pets Rescued:</h3>
+      <h3><%=Pet.count_rescued%></h3>
+      <h3>Total Pets in Shelter:</h3>
+      <h3><%=Pet.count_in_shelter%></h3>
+      <h3>Total Adoptions:</h3>
+      <h3><%=Pet.count_adopted%></h3>
+      </article>
     </div>
