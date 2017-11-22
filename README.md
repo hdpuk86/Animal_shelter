@@ -49,3 +49,5 @@ At first I just concentrated on getting the MVP up and running as fast as possib
 ## The Outcome
 
 I managed to meet the MVP within 3 days which meant I was also able to go on and complete the extension tasks. Overall I was fairly happy with my styling and managed to keep to my initial wireframes. I was also able to move on and create some extra features such as boxes on the owner profiles that match them with pets in the shelter based on their preferences, extra boxes on the homepage which update as actions are taken around the site.
+
+[Project Screenshots](https://github.com/hdpuk86/Animal_shelter/tree/master/screenshots)
