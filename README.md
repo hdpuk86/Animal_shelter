@@ -28,17 +28,9 @@ The project must be built using only:
   - Ruby
 
 It must NOT use:
-  - Any Object Relational Mapper (e.g. ActiveRecord)
-  - JavaScript. At all. Don't even think about it, James.
+  - Any Object Relational Mapper
+  - JavaScript
   - Authentication
-
-## Learning Points
-
-- Ruby fundamentals
-- TDD (where appropriate)
-- OOP
-- Web Programming ( REST/MVC )
-- Databases with CRUD actions
 
 ## My Approach
 
