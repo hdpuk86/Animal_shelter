@@ -33,13 +33,11 @@ It must NOT use:
 
 ## My Approach
 
-I created class and object diagrams to initially plan out what I would need to do to meet the MVP. I also made use of an activity diagram and use case diagram which I found helpful when it came to drawing up a site map. I then used my plans to come up with the wireframes.
-
-At first I just concentrated on getting the MVP up and running as fast as possible but I included the CRUD actions as part of my MVP. Once I had this all in place I concentrated on styling before moving through the extensions. 
+I initially planned my MVP out with the use of class, object, activity and use case diagrams. These were really helpful to then draw up my site mape and wireframes. At first I concentrated on getting the MVP up and running as fast as possible but I also included the CRUD actions as part of the MVP. Once I had that in place I focused on styling before moving through the extensions. 
 
 ## The Outcome
 
-I managed to meet the MVP within 3 days which meant I was also able to go on and complete the extension tasks. Overall I was fairly happy with my styling and managed to keep to my initial wireframes. I was also able to move on and create some extra features such as boxes on the owner profiles that match them with pets in the shelter based on their preferences, extra boxes on the homepage which update as actions are taken around the site.
+I managed to meet the MVP within 3 days which meant I was also able to go on and complete the extension tasks. Overall I was  happy with the styling and managed to keep to my initial wireframes. I found implementing CSS quite tricky but was able to make good use of flex boxes in the end and eventually everything was laid out as planned. I was able to create some extra features such as boxes on the owner profiles that automatically update to show potential matches based on their preferences and also news boxes on the homepage that update as actions are taken around the site.
 
 ## Screenshots
 ### Homepage
